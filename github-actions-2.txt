@@ -1,0 +1,5 @@
+-- Now that I have understood how to write commands
+-- in jobs, next is to learn more about github actions
+-- for that I will create a new yaml file, called actions.yml
+
+touch actions.yml

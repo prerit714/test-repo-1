@@ -1,0 +1,37 @@
+name: Actions Workflow
+on: [push]
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      # Run a for granted action from a repository
+      - name: Simple JS Action
+        # For step object to use
+        id: greet
+        # Instead of run, write "uses"
+        # "uses" takes a reference to an action
+        # Actions can be written in this current
+        # Repository, and just give a path to this
+        # like uses: ./
+        # Action, else give a github path (public)
+        # An action is a re-usable unit of a code
+        uses: actions/hello-world-javascript-action@v1
+        # Advised not to use main or master due to code
+        # breaking behaviours, therefore using versions
+        # is the best way to use the actions, using
+        # commit id is the safest way as it will never
+        # break your code no matter what
+        # uses: actions/hello-world-javascript-action@v1
+        # After @ write a branch name or version
+        # You can also use code from a specific
+        # commit
+        with:
+          who-to-greet: Prerit Dayal
+        # Actions can also produce an output
+      - name: Log Greeting Time
+        # Inside the double {{}} you can make use of a variable
+        # that github makes available to you
+        # steps is one of the objects
+        run: echo "${{ steps.greet.outputs.time }}"
+        # PUSH after this line
+
