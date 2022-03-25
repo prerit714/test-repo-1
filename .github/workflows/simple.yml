@@ -32,9 +32,14 @@ jobs:
     # Adding another job to test commands on
     # A different VM which will run in parallel
     runs-on: windows-latest
+    # Specify the array of jobs that this jobs depends upon
+    # This job will only run once the specified jobs are done
+    needs: ["run-shell-command"] 
+    # Doing the above will make your actions sequential (WOAH!)
     steps:
       - name: Directory of PowerShell
         run: Get-Location
       - name: Directory of Bash
         run: pwd
+        # Windows has a bash terminal too that fallbacks to sh
         shell: bash

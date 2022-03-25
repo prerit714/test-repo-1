@@ -47,3 +47,7 @@ ToEnableMoreInformation
 
 3. IMPORTANT
     -- Each job will run in parallel on different VM
+    -- To run jobs sequentially you have to specify a needs array of jobs
+    -- that are dependent on your your current job
+    -- The job will only run when specified jobs in the needs array are
+    -- done successfully (Maybe I will need it sometime)
