@@ -4,6 +4,14 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List Environment variables in this VM
+        run: |
+          echo "The commit id that triggered work flow is $GITHUB_SHA"
+          echo "The repo used is: $GITHUB_REPOSITORY"
+          echo "The pwd is: $GITHUB_WORKSPACE"
+          echo "${{ github.token }}"
+        # Github token to authenticate github repo
+        # git clone git@github:$GITHUB_REPOSITORY
       - name: List Files in the VM
         run: |
           pwd
