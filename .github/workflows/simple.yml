@@ -19,3 +19,12 @@ jobs:
         run: |
           node --version
           npm --version
+      - name: running a python command
+        # Now to run a python script
+        run: |
+          import platform
+          import random
+          print("Processor is", platform.processor())
+          print("A random number is", random.randint(1, 1000))
+        # Specify shell
+        shell: python
