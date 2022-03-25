@@ -36,7 +36,7 @@ ToEnableMoreInformation
 
 - Go to Settings>Secrets>AddANewSecret
 1. Name-ACTIONS_RUNNER_DEBUG Value-true
-1. Name-ACTIONS_STEP_DEBUG Value-true
+2. Name-ACTIONS_STEP_DEBUG Value-true
 - Use the above secrets if you are debugging your code
 - Doing the above will let you have more details in
 - Your Log-Archive artifact
@@ -44,3 +44,6 @@ ToEnableMoreInformation
 
 -- Now is the task to run commands on different shells
 -- on different jobs
+
+3. IMPORTANT
+    -- Each job will run in parallel on different VM

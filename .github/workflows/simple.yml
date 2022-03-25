@@ -28,3 +28,13 @@ jobs:
           print("A random number is", random.randint(1, 1000))
         # Specify shell
         shell: python
+  run-windows-commands:
+    # Adding another job to test commands on
+    # A different VM which will run in parallel
+    runs-on: windows-latest
+    steps:
+      - name: Directory of PowerShell
+        run: Get-Location
+      - name: Directory of Bash
+        run: pwd
+        shell: bash
