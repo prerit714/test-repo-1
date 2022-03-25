@@ -7,8 +7,25 @@ jobs:
       - name: List Files in the VM
         run: |
           pwd
-          ls
+          ls -a
+      # In the above, ls won't return anything
+      # as there are no files in the VM
       # Run a for granted action from a repository
+      - name: Another step to clone my repo code to this VM
+        # Using the action below will authenticate
+        # the current commit and will use it to clone
+        # the current repo I am working on (COOL!)
+        # This can also be done by using run
+        # commands by directly using git clone
+        # but this method of using actions is way
+        # cleaner and better!, checkout will pull
+        # the code from the current commit I will do
+        # while pushing (My current understanding lol)
+        uses: actions/checkout@v1
+      - name: Again list files in the VM after checkout
+        run: |
+          pwd
+          ls -a
       - name: Simple JS Action
         # For step object to use
         id: greet
