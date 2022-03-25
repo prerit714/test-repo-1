@@ -4,6 +4,10 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List Files in the VM
+        run: |
+          pwd
+          ls
       # Run a for granted action from a repository
       - name: Simple JS Action
         # For step object to use

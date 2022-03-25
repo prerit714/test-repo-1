@@ -3,3 +3,8 @@
 -- for that I will create a new yaml file, called actions.yml
 
 touch actions.yml
+
+
+-- IMPORTANT
+-- actions/checkout
+-- This action will clone your code in the VM
