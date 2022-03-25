@@ -1,0 +1,43 @@
+# Similar to json, yaml is just key-value pairs, it is more readable to
+# Tabs are not allowed in yaml files, use only spaces, either 2 or 4
+
+name: Prerit
+age: 22
+address: "Not known bro!"
+active: true
+anime:
+  favourite: "Shingeki No Kyojin"
+  is_good: true
+games:
+  favourite: "Tomb Raider 2013"
+  is_good: true
+
+json_object: {
+  key: "value"
+}
+
+json_array: [
+  item_one, item_two
+]
+
+objects_array:
+  - key_one: value_one
+  - key_two: value_two
+
+# Below is the syntax to write long text
+long_text: >
+  this is a 
+  text that is 
+  supposed to be long
+
+# The above is equivalent to
+# { "long_text": "this is a text that is supposed to be long\n" }
+
+# To preserve the new lines do
+long_text_2: |
+  this is a text
+  that will have a newline
+  on each line
+
+# The above is equivalent to
+# { "long_text_2": "this is a text\nthat will have a newline\non each line\n" }
