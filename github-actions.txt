@@ -1,0 +1,18 @@
+- For private accounts github actions is not free, for public accounts it is free
+- For the public accounts, you have a certain limit, after which you have to pay
+
+- In order to create your workflow file do
+- mkdir -p .github/workflows/ && cd .github/workflows && touch simple.yml
+
+-- This should be the output of "$ tree foo -a"
+foo
+└── .github
+    └── workflows
+        └── simple.yml
+
+2 directories, 1 file
+
+- Workflows can run when following events occour
+- Push, Pull Request (Opened, Merged), Issue(Created, Closed)
+- Schedule (every 6pm for example)
+- External Event

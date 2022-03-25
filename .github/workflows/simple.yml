@@ -1,0 +1,21 @@
+# To give name to our workflow
+# Remember: keys can't have spaces
+
+name: "Shell Commands"
+on: [push]
+jobs:
+  # A yaml object
+  run-shell-command:
+    # A yaml object
+    runs-on: ubuntu-latest
+    steps:
+      # A yaml array of objects
+      # Each object in steps can have a 
+      - name: echo a string
+        # Running a bash command as an action
+        run: echo "Hello World!"
+      - name: multiline script
+        # Now to run multiple commands
+        run: |
+          node --version
+          npm --version
